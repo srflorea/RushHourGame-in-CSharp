@@ -1,7 +1,7 @@
 Pentru implementarea proiectului am folosit limbajul de programre C# in Visual
 Studio.
 Arhiva contine fisierele sursa ale temei si README.
-Tema implementeaza jocul RushHour.
+Proiectul implementeaza jocul RushHour.
 Programul porneste de la o configuratie a parcarii ce o citeste din fisierul 
 "in.txt". Pe baza acestei configuratii contruieste in constructorul clasei
 "Parcare" o lista cu poztiile masinilor si matricea de ocupare a parcarii initial.
