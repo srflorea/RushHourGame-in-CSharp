@@ -1,0 +1,36 @@
+Pentru implementarea proiectului am folosit limbajul de programre C# in Visual
+Studio.
+Arhiva contine fisierele sursa ale temei si README.
+Tema implementeaza jocul RushHour.
+Programul porneste de la o configuratie a parcarii ce o citeste din fisierul 
+"in.txt". Pe baza acestei configuratii contruieste in constructorul clasei
+"Parcare" o lista cu poztiile masinilor si matricea de ocupare a parcarii initial.
+Matricea de ocupare a unei parcari reprezinta o matrice ca va contine 'true'
+sau 'false' in functie de ocuparea unei anumite pozitii in parcare.
+Tipul masinilor este retinut intr-un enum numit 'TipMasinaEnum'.
+Am folosit algoritmul de cautare auristica A* predat la curs.
+Euristica folosita este numarul de masini ce desparte masina rosie de iesire
+adunat cu distanta Manhattan a masinii rosii si numarul masinilor libere din
+parcare. O parcare curenta se expandeaza in toate directiile posibile si se
+introduc in lista 'Open' ce are implementata in clasa'Set' metoda 'Add' astfel 
+incat sa introduca elementele sortate dupa scorul fiecarei parcari. Astfel, 
+la extragerea din aceasta lista, vor fi expandate intordeauna parcarile cu cel
+mai bun scor. Daca algoritmul se incheie cu succes va fi apelata o metoda ce va
+reface traseul pana la starea initiala. Clasa 'RezultatCautare' va retine aceste 
+table partiale care vor fi afisate in fisierul 'out.txt'.
+In fisierul de iesire vor fi afisate si starile initiala si finala si totodata
+adunate la numarul parcarilor partiale.
+Algorimul A* va avea o crestere exponentiala a spatiului starilor de explorat
+daca solutia nu este gasita rapid.
+Metoda 'aplicaMutare' ce este apelata in A* are complexitatea maxima 
+O(max(lungimeParcare, latimeParcare)). Aceasta metoda este apelata intr-un ciclu
+ce poate sa cicleze maxim de: numar masini in parcare.  
+Complexitatea programului este asadar: nr parcari analizate * nr masini in parcare *
+max(lungimeParcare, latimeParcare).
+Complexitatile celorlalte functii nu le-am mai adunat deoarece am calculat o 
+aproximare superioara.
+
+Programul probabil nu o sa treaca testele mai complicate. Am incercat mai multe euristici
+si mai multe implementari ale algoritmului A* si totusi nu am reusit sa il fac sa ruleze
+mai bine. Nu inteleg de ce si as vrea sa te rog, daca este  posibil, ca in feadback sa
+imi spui de ce ruleaza greu.
