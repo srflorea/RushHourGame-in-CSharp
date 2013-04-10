@@ -29,8 +29,3 @@ Complexitatea programului este asadar: nr parcari analizate * nr masini in parca
 max(lungimeParcare, latimeParcare).
 Complexitatile celorlalte functii nu le-am mai adunat deoarece am calculat o 
 aproximare superioara.
-
-Programul probabil nu o sa treaca testele mai complicate. Am incercat mai multe euristici
-si mai multe implementari ale algoritmului A* si totusi nu am reusit sa il fac sa ruleze
-mai bine. Nu inteleg de ce si as vrea sa te rog, daca este  posibil, ca in feadback sa
-imi spui de ce ruleaza greu.
